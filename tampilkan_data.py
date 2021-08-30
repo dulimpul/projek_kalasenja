@@ -3,6 +3,7 @@ import time
 import menu
 import os
 
+
 notFoud ="""
 #  ./$$.../$$../$$$$$$../$$$$$$$$......./$$$$$$$$./$$$$$$../$$.../$$./$$.../$$./$$$$$$$.
 #  |.$$$.|.$$./$$__..$$|__..$$__/......|.$$_____//$$__..$$|.$$..|.$$|.$$$.|.$$|.$$__..$$
@@ -94,8 +95,9 @@ def ShowDataTh():
     if len(tahun) <= 0:
         print(notFoud) 
     else:
-        for indeks in range(len(tahun)):
-            print("%d %s" % (indeks, tahun[indeks]))
+        for indeksth in range(len(tahun)):
+            dataTHun = indeksth, tahun[indeksth]
+            print("%d %s" % dataTHun)
 
 def showDataYi():
     if len(Yi) <= 0:

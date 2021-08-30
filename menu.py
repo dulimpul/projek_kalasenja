@@ -2,6 +2,7 @@ import os
 import time
 from upload_data import *
 from tampilkan_data import *
+from Edit_data import *
 
 def menu():
     print("""                                                                        
@@ -32,7 +33,7 @@ def menu():
         menutambah()
     elif input_key == 3:
         os.system("clear")
-        print("kosong")
+        editDataMenu()
     elif input_key == 4:
         os.system("clear")
         print("lorem ipsum")

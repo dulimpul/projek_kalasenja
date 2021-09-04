@@ -1,6 +1,8 @@
+import os
 import tampilkan_data  
 import menu
 import time
+import data
 
 def editDataMenu():
     print("="*20,"MENU EDIT DATA", "="*20 )
@@ -13,26 +15,72 @@ def editDataMenu():
     keyEdit = int(input("Masukan pilihan :")) 
 
     if keyEdit == 1:
+        #Tahun edit data
         editTahun()
+        print("Akan kembali")
         time.sleep(5)
+        os.system("clear") # if you use windows os add hashtag in first word
+        #os.system("cls") # if you use windows os remove hashtag in first word
         editDataMenu()
     elif keyEdit == 2:
-        print("berhasil")
+        #Yi data edit
+        editYi()
+        print("Akan kembali")
         time.sleep(5)
+        os.system("clear") # if you use windows os add hashtag in first word
+        #os.system("cls") # if you use windows os remove hashtag in first word
         editDataMenu()
     elif keyEdit == 3:
-        print("berhasil")
+        #Ui data edit
+        editUi()
+        print("Akan kembali")
         time.sleep(5)
+        os.system("clear") # if you use windows os add hashtag in first word
+        #os.system("cls") # if you use windows os remove hashtag in first word
         editDataMenu()
     elif keyEdit == 99:
+        os.system("clear") # if you use windows os add hashtag in first word
+        #os.system("cls") # if you use windows os remove hashtag in first word
         menu.menu()
 
-
+# function edit data tahun
 def editTahun():
-    print("") # masih bingung menampilkan data nya
-    indeks = input("Masukan angka yang ada di samping list: ")
-    if(indeks > len(tampilkan_data.tahun)):
+    for i in range(len(data.tahun)):
+        TH__tmpil = i , data.tahun[i]
+        print("%d %s"%TH__tmpil)
+
+    indeksTH = int(input("Masukan angaka indeks yang ingin diubah: "))
+    os.system("clear")
+    if(indeksTH > len(data.tahun)):
         print(tampilkan_data.notFoud)
     else:
         dataThunNew = int(input("Masukan data yang baru: "))
-        tampilkan_data.tahun[indeks] = dataThunNew
+        data.tahun[indeksTH] = dataThunNew
+
+# function edit data Yi
+def editYi():
+    for i in range(len(data.Yi)):
+        YI_tmpil = i , data.Yi[i]
+        print("%d %s"% YI_tmpil)
+
+    indeksYi = int(input("Masukan angaka indeks yang ingin diubah: "))
+    os.system("clear")
+    if (indeksYi > len(data.Yi)):
+        print(tampilkan_data.notFoud)
+    else:
+        dataYiNew  = int(input("Masukan data yang baru: "))
+        data.Yi[indeksYi] = dataYiNew
+    
+# function edit data Ui
+def editUi():
+    for i in range(len(data.Ui)):
+        UI_tmpil = i, data.Ui[i]
+        print("%d %s"% UI_tmpil)
+
+    indeksUi = int(input("Masukan angaka indeks yang ingin diubah:")) 
+    os.system("clear")
+    if (indeksUi > len(data.Ui)):
+        print(tampilkan_data.notFoud)
+    else:
+        dataUiNew = int(input("Masukan data yang baru: "))
+        data.Ui[indeksUi] = dataUiNew

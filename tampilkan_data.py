@@ -34,7 +34,9 @@ def showsDataMenu():
         time.sleep(2)
         print("==========> 100%")
         time.sleep(0.6)
+        print("\n")
         ShowDataTh() #------------------------------------------>
+        print("\n")
         input("input anything key untuk kembali ~")
         time.sleep(2)
         print("kembali ke menu====> 45%")
@@ -43,6 +45,7 @@ def showsDataMenu():
         time.sleep(2)
         print("kembali ke menu==========> 100%")
         time.sleep(0.6)
+        # os.system("cls")
         os.system("clear")
         showsDataMenu()
     elif kunci == 2:
@@ -53,7 +56,9 @@ def showsDataMenu():
         time.sleep(2)
         print("==========> 100%")
         time.sleep(0.6)
+        print("\n")
         showDataYi() # --------------------------------------->
+        print("\n")
         input("input anything key untuk kembali ~")
         time.sleep(2)
         print("kembali ke menu====> 45%")
@@ -62,6 +67,7 @@ def showsDataMenu():
         time.sleep(2)
         print("kembali ke menu==========> 100%")
         time.sleep(0.6)
+        # os.system("cls")
         os.system("clear")
         showsDataMenu()
     elif kunci == 3:
@@ -72,7 +78,9 @@ def showsDataMenu():
         time.sleep(2)
         print("==========> 100%")
         time.sleep(0.6)
+        print("\n")
         showDataUi()
+        print("\n")
         input("input anything key untuk kembali ~")
         time.sleep(2)
         print("kembali ke menu====> 45%")
@@ -81,9 +89,11 @@ def showsDataMenu():
         time.sleep(2)
         print("kembali ke menu==========> 100%")
         time.sleep(0.6)
+        # os.system("cls")
         os.system("clear")
         showsDataMenu()
     elif kunci == 99:
+        # os.system("cls")
         os.system("clear")
         menu.menu()
     else:
@@ -99,6 +109,8 @@ def ShowDataTh():
             dataTHun = indeksth, tahun[indeksth]
             print("%d %s" % dataTHun)
 
+   
+
 def showDataYi():
     if len(Yi) <= 0:
         print(notFoud) 
@@ -112,3 +124,4 @@ def showDataUi():
     else:
         for indeks in range(len(Ui)):
             print("%d %s" % (indeks, Ui[indeks]))
+

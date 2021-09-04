@@ -21,7 +21,8 @@ def menu():
     print("[2]~ Uplod data")
     print("[3]~ Edit data")
     print("[4]~ Clear data ")
-    print("[5]~ Exit")
+    print("[5]~ Hitung data")
+    print("[6]~ Exit")
 
     input_key = int(input("INPUT ID YANG ADA DI SAMPING LIST :"))
     
@@ -37,8 +38,14 @@ def menu():
     elif input_key == 4:
         os.system("clear")
         print("lorem ipsum")
+        os.system("clear") # sementara 
         menu()
     elif input_key == 5:
+        os.system("clear")
+        print("lorem ipsum")
+        os.system("clear") # sementara 
+        menu()
+    elif input_key == 6:
         os.system("clear")
         exit()
     else:

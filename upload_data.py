@@ -1,6 +1,7 @@
 from data import *
 import time
 import menu
+import os
 
 def menutambah():
     print("\n \n")
@@ -15,16 +16,26 @@ def menutambah():
 
     if key_word == 1 :
         tabahTh()
+        os.system("clear")
+        #os.system("cls")       # if you use windows os remove hashtag
         menutambah()
     elif key_word == 2:
         tambahYi()
+        os.system("clear")
+        #os.system("cls")       # if you use windows os hashtag
         menutambah()
     elif key_word == 3:
         tambahUi()
+        os.system("clear")
+        #os.system("cls")       # if you use windows os hashtag
         menutambah()
     elif key_word == 99:
+        os.system("clear")
+        #os.system("cls")       # if you use windows os hashtag
         menu.menu()
     else:
+        os.system("clear")
+        #os.system("cls")       # if you use windows os hashtag
         menutambah()
 
 def tabahTh():

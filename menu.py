@@ -1,8 +1,9 @@
 import os
-import time
 from upload_data import *
 from tampilkan_data import *
 from Edit_data import *
+from core_remove import remove_menu
+from hitung_core import menu_hitung
 
 def menu():
     print("""                                                                        
@@ -37,14 +38,10 @@ def menu():
         editDataMenu()
     elif input_key == 4:
         os.system("clear")
-        print("lorem ipsum")
-        os.system("clear") # sementara 
-        menu()
+        remove_menu.menuhapus()
     elif input_key == 5:
         os.system("clear")
-        print("lorem ipsum")
-        os.system("clear") # sementara 
-        menu()
+        menu_hitung.menuhitung()
     elif input_key == 6:
         os.system("clear")
         exit()

@@ -105,9 +105,12 @@ def ShowDataTh():
     if len(tahun) <= 0:
         print(notFoud) 
     else:
-        for indeksth in range(len(tahun)):
-            dataTHun = indeksth, tahun[indeksth]
-            print("%d %s" % dataTHun)
+        for v,g in enumerate (tahun, start=1):
+             print(v,g)
+
+        # for indeksth in range(len(tahun)):
+        #     dataTHun = indeksth, tahun[indeksth]
+        #     print("%d %s" % dataTHun)
 
    
 

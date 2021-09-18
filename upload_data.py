@@ -1,5 +1,4 @@
 from data import *
-import time
 import menu
 import os
 

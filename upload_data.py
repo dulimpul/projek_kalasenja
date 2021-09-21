@@ -42,9 +42,9 @@ def tabahTh():
     tahun.append(tmbhTh)
 
 def tambahYi():
-    yitmbah = int(input("MASUKAN NILAI YI :"))
+    yitmbah = float(input("MASUKAN NILAI YI :"))
     Yi.append(yitmbah)
 
 def tambahUi():
-    Uitambah = int(input("MASUKAN NILAI UI :"))
+    Uitambah = float(input("MASUKAN NILAI UI :"))
     Ui.append(Uitambah)

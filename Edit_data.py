@@ -63,12 +63,12 @@ def editYi():
         YI_tmpil = i , data.Yi[i]
         print("%d %s"% YI_tmpil)
 
-    indeksYi = int(input("Masukan angaka indeks yang ingin diubah: "))
+    indeksYi = float(input("Masukan angaka indeks yang ingin diubah: "))
     os.system("clear")
     if (indeksYi > len(data.Yi)):
         print(tampilkan_data.notFoud)
     else:
-        dataYiNew  = int(input("Masukan data yang baru: "))
+        dataYiNew  = float(input("Masukan data yang baru: "))
         data.Yi[indeksYi] = dataYiNew
     
 # function edit data Ui
@@ -77,10 +77,10 @@ def editUi():
         UI_tmpil = i, data.Ui[i]
         print("%d %s"% UI_tmpil)
 
-    indeksUi = int(input("Masukan angaka indeks yang ingin diubah:")) 
+    indeksUi = float(input("Masukan angaka indeks yang ingin diubah:")) 
     os.system("clear")
     if (indeksUi > len(data.Ui)):
         print(tampilkan_data.notFoud)
     else:
-        dataUiNew = int(input("Masukan data yang baru: "))
+        dataUiNew = float(input("Masukan data yang baru: "))
         data.Ui[indeksUi] = dataUiNew

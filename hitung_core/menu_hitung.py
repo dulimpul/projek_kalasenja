@@ -33,33 +33,50 @@ def menuhitung():
 
 def TmpilTabeldataTh():
     tahunTB = len(data.tahun) 
-    print(tahunTB)
+    return tahunTB
   
 
 def TmpilanTabelYi():
     YiTB = data.Yi.copy()
     hasilTByi = sum(YiTB)
-    print(hasilTByi)
+    return hasilTByi
 
 def TmpilanTbelUi():
     UiTB = data.Ui.copy()
     hasilTbui = sum(UiTB)
-    print(hasilTbui)
+    return hasilTbui
 
 def Uipangakat2():
     UiTB2 = data.Ui.copy()
     my_new_list = []
     for i in UiTB2:
         my_new_list.append(i ** 2)
+    
+    hasil2 = sum(my_new_list)
+    
+    return my_new_list,hasil2
 
-    print(my_new_list)
+def Uipangakat4():
+    UiTB4 = data.Ui.copy()
+    my_new_list = []
+    for u4 in UiTB4:
+        my_new_list.append(u4 ** 4)
+
+    hasil4  = sum(my_new_list)
+    return my_new_list,hasil4
+
 
 def SemuaTabel():
-    print("="*30, "Jumlah tabel tahun(n)", "="*30)
-    TmpilTabeldataTh()
-    print("="*30, "Jumlah YI", "="*30)
-    TmpilanTabelYi()
-    print("="*30, "Jumlah UI", "="*30)
-    TmpilanTbelUi()
-    print("="*30, "Jumlah UI PANGAKAT 2", "="*30)
-    Uipangakat2()
+    a = TmpilTabeldataTh()
+    b = TmpilanTabelYi()
+    c = TmpilanTbelUi()
+    d = Uipangakat2()
+    e = Uipangakat4()
+
+    print('='*30, 'HASIL TABEL', '='*30)
+    print('HASIL n          =',a)
+    print('JUMLAH YI        =',b)
+    print('JUMLAH UI        =',c)
+    print('HASIL DAN JUMLAH =',d)
+    print('HASIL DAN JUMLAH =',e)
+    

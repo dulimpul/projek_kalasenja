@@ -11,6 +11,7 @@ def menuhitung():
     print("[4] ~ Perhitungan jumlah penduduk")
     print("[5] ~ Perhitungan ysst")
     print("[6] ~ Perhitungan kabel")
+    print('[99] ~ kembali ke menu utama')
     print("\n")
     keyhit = int(input("Masukan pilihan :"))
 
@@ -30,6 +31,9 @@ def menuhitung():
         print("lorem ip sum")
     elif keyhit == 6:
         print("lorem ip sum")
+    elif keyhit == 99:
+        os.system('clear')
+        menu.menu()
     else:
         os.system("clear") # Linux
         menu.menu()
@@ -119,3 +123,42 @@ def SemuaTabel():
     print('HASIL DARI Ui4                =',e)
     print('JUMLHA KESELURUHAN  DARI Ui4  =',e2)
     
+    # hasil dari Yi kali Ui
+    print('='*50)
+    menghitungYIdanUI()
+
+    # hasil dari Yi kali Ui pangkat 2
+    print('='*50)
+    MenghitungYidanUiPangakat()
+
+def menghitungYIdanUI():
+    YIclone = data.Yi.copy()
+    Uiclone = data.Ui.copy()
+
+    yi_kali_Ui = []
+
+    for hitung in YIclone:
+        hitung2 = hitung
+    for hitung3 in Uiclone:
+        yi_kali_Ui.append(hitung2 * hitung3)
+
+    HasilAkhirUIYI = sum(yi_kali_Ui)
+    print('HASIL PERKALIAN YI DAN UI ADALAH =',yi_kali_Ui)
+    print('TOTAL PERKALIAN YI DAN UI ADALAH =', HasilAkhirUIYI)
+
+def MenghitungYidanUiPangakat():
+    YIclone2 = data.Yi.copy()
+    YiKaliUi2 = Uipangakat2(lihatHsil2='null').copy()
+
+    yi_kali_ui2 = []
+
+    for HitungUI2 in YiKaliUi2:
+        UI2pangkat = HitungUI2
+    
+    for HitungUIYI2 in YIclone2:
+        yi_kali_ui2.append(HitungUIYI2 * UI2pangkat)
+
+    HasilAkhirUIYI2 = sum(yi_kali_ui2)
+
+    print('HASIL  PERKALIAN YI DAN UI PANGKAT 2 ADALAH =',yi_kali_ui2)
+    print('TOTAL  PERKALIAN YI DAN UI PANGKAT 2 ADALAH =', HasilAkhirUIYI2)

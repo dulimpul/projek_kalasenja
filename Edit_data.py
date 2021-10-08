@@ -84,10 +84,3 @@ def editUi():
     else:
         dataUiNew = float(input("Masukan data yang baru: "))
         data.Ui[indeksUi] = dataUiNew
-
-
-
-def kalimantan_love():
-    print('WELCOME KALIMANTAN')
-
-kalimantan_love()

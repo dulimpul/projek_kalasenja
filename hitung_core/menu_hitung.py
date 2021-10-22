@@ -2,6 +2,7 @@ import menu
 import os
 import data
 import numpy as np
+from math import pow
 
 def menuhitung():
     print("="*50, "MENU HITUNG", "="*50)
@@ -31,9 +32,19 @@ def menuhitung():
         os.system('clear')
         menuhitung()
     elif keyhit == 3:
-        print("lorem ip sum")
+        os.system('clear')
+        hasil_yn()
+        print('\n')
+        input('enter to countinue')
+        os.system('clear')
+        menuhitung()
     elif keyhit == 4:
-        print("lorem ip sum")
+        os.system('clear')
+        jumlahPendudukAkhir()
+        print('\n')
+        input('enter to countinue')
+        os.system('clear')
+        menuhitung()
     elif keyhit == 5:
         print("lorem ip sum")
     elif keyhit == 6:
@@ -220,3 +231,42 @@ def A_B_C_nilia():
     print('A =', mencari_nilai_A())
     print('B =', mencarinilai_B())
     print('C =', mencarinilai_C())
+
+# ==============================================================================================================
+
+def mencarinilai_yn():
+    # rumus dasar =  yn = a + b(tahun) + c x (9)pangat 2
+
+    # variabel 
+
+    a_yn =  mencari_nilai_A()
+    b_yn = mencarinilai_B()
+    c_yn = mencarinilai_C()
+    
+    tahun_yn  = TmpilTabeldataTh()
+    tahun2_yn = tahun_yn ** 2
+
+    bxtahu_yn = b_yn * tahun_yn
+    cxtahun2_yn = c_yn * tahun2_yn
+
+    hasil_yn = a_yn + bxtahu_yn + cxtahun2_yn
+
+    return hasil_yn
+
+def hasil_yn():
+    print(' NILAI Yn  =', mencarinilai_yn())
+
+
+# =============================================================================================================
+
+def mencariJumalahPenduduk_n():
+    slisih = float(input('Masukan selisih tahun terakhir dengan tahun yang baru :'))
+    penduduk = float(input('Masukan jumlah penduduk lama :'))
+    persen = float(input('Masukan persen tanpa tanda persen :'))
+    persen2 = persen / 100
+    hitung1 = (1 + persen2) ** slisih
+    MJP_n = penduduk * hitung1
+    return MJP_n
+
+def jumlahPendudukAkhir():
+    print('hasil Yn adalah =', mencariJumalahPenduduk_n(),' jiwa')

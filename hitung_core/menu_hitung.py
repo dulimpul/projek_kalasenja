@@ -46,7 +46,12 @@ def menuhitung():
         os.system('clear')
         menuhitung()
     elif keyhit == 5:
-        print("lorem ip sum")
+        os.system('clear')
+        ysstnfinal()
+        print('\n')
+        input('enter to countinue')
+        os.system('clear')
+        menuhitung()
     elif keyhit == 6:
         print("lorem ip sum")
     elif keyhit == 99:
@@ -270,3 +275,20 @@ def mencariJumalahPenduduk_n():
 
 def jumlahPendudukAkhir():
     print('hasil Yn adalah =', mencariJumalahPenduduk_n(),' jiwa')
+
+# ===================================================================================================================
+
+def ysstn():
+    # rumus asli
+    # yn (rasio / 100)
+
+    # varibael
+    rasio = mencariJumalahPenduduk_n()
+    yn_ysstn = mencarinilai_yn()
+
+    # hasil
+    hasil_ysstn = yn_ysstn * (rasio / 100)
+    return hasil_ysstn
+
+def ysstnfinal():
+    print('nilai Ysstn =',ysstn())
